@@ -1,6 +1,6 @@
 # 💻 Portfólio • Gabriel Roque
 
-🚀 Portfólio pessoal desenvolvido para apresentar minha trajetória, projetos e habilidades na área de **Ciência da Computação**, com foco em **Inteligência Artificial e Machine Learning**.
+🚀 Portfólio pessoal desenvolvido para apresentar minha trajetória, projetos e habilidades na área de **Ciência da Computação**, com foco em **Inteligência Artificial e Machine Learning.**
 
 ---
 
