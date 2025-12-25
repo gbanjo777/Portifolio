@@ -13,4 +13,4 @@ Este portfólio foi criado para centralizar minhas informações profissionais e
 ---
 
 ## 🌐 Acesse o portfólio
-👉 **Link:**  
+👉 **Link:https://gbanjo777.github.io/Portifolio/**  
