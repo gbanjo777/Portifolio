@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Gabriel Roque | Portfólio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <style>
+      :root {
+        --bg-dark: #0f172a;
+        --bg-card: #020617;
+        --primary: #38bdf8;
+        --secondary: #a855f7;
+        --accent: #ef4444;
+        --text: #e5e7eb;
+        --muted: #94a3b8;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", sans-serif;
+      }
+
+      body {
+        background: radial-gradient(circle at top, #020617, #0f172a);
+        color: var(--text);
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .container {
+        width: 95%;
+        max-width: 1100px;
+        background: rgba(2, 6, 23, 0.9);
+        border-radius: 20px;
+        padding: 40px;
+        box-shadow: 0 0 40px rgba(56, 189, 248, 0.15);
+        animation: fadeIn 1s ease;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      header {
+        text-align: center;
+        margin-bottom: 40px;
+      }
+
+      header h1 {
+        font-size: 3rem;
+        color: var(--primary);
+        text-shadow: 0 0 5px rgba(56, 189, 248, 0.6),
+          0 0 15px rgba(168, 85, 247, 0.5);
+        animation: glow 3s infinite alternate;
+      }
+
+      @keyframes glow {
+        from {
+          text-shadow: 0 0 5px rgba(56, 189, 248, 0.4),
+            0 0 10px rgba(168, 85, 247, 0.3);
+        }
+        to {
+          text-shadow: 0 0 10px rgba(56, 189, 248, 0.9),
+            0 0 25px rgba(168, 85, 247, 0.8);
+        }
+      }
+
+      header p {
+        color: var(--muted);
+        margin-top: 10px;
+        font-size: 1.2rem;
+      }
+
+      /* NAV */
+      nav {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin-bottom: 40px;
+        flex-wrap: wrap;
+      }
+
+      nav button {
+        background: transparent;
+        border: 1px solid var(--primary);
+        color: var(--primary);
+        padding: 10px 18px;
+        border-radius: 25px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        font-size: 1rem;
+      }
+
+      nav button:hover,
+      nav button.active {
+        background: var(--primary);
+        color: #020617;
+        box-shadow: 0 0 15px var(--primary);
+        transform: translateY(-2px);
+      }
+
+      /* SECTIONS */
+      section {
+        display: none;
+        animation: slide 0.6s ease;
+      }
+
+      section.active {
+        display: block;
+      }
+
+      @keyframes slide {
+        from {
+          opacity: 0;
+          transform: translateX(-20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
+      h2 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+        color: var(--secondary);
+      }
+
+      .card {
+        background: var(--bg-card);
+        border-radius: 15px;
+        padding: 25px;
+        margin-bottom: 20px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+        transition: all 0.3s ease;
+      }
+
+      .card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 0 25px rgba(168, 85, 247, 0.4);
+      }
+
+      .skills span {
+        display: inline-block;
+        padding: 10px 15px;
+        margin: 8px;
+        border-radius: 20px;
+        background: linear-gradient(135deg, var(--primary), var(--secondary));
+        color: #020617;
+        font-weight: bold;
+        transition: transform 0.3s ease;
+      }
+
+      .skills span:hover {
+        transform: scale(1.1);
+      }
+
+      a {
+        color: var(--primary);
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      footer {
+        text-align: center;
+        margin-top: 30px;
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Gabriel Roque</h1>
+        <p>Ciência da Computação • Python • IA • Programação</p>
+      </header>
+
+      <nav>
+        <button class="active" onclick="showTab('sobre')">Sobre</button>
+        <button onclick="showTab('projetos')">Projetos</button>
+        <button onclick="showTab('habilidades')">Habilidades</button>
+        <button onclick="showTab('contato')">Contato</button>
+      </nav>
+
+      <section id="sobre" class="active">
+        <h2>Sobre mim</h2>
+        <div class="card">
+          <p>
+            Sou estudante de Ciência da Computação, apaixonado por tecnologia,
+            Python e Inteligência Artificial. Gosto de criar projetos práticos,
+            explorar lógica, automação, jogos e aplicações inteligentes.
+          </p>
+        </div>
+      </section>
+
+      <section id="projetos">
+        <h2>Projetos</h2>
+
+        <div class="card">
+          <h3>🚀 Projetos em Python</h3>
+          <p>Automação de tarefas, scripts, jogos e lógica.</p>
+        </div>
+
+        <div class="card">
+          <h3>🤖 Estudos em IA</h3>
+          <p>Machine Learning, redes neurais e Ciência de Dados.</p>
+        </div>
+      </section>
+
+      <section id="habilidades">
+        <h2>Habilidades</h2>
+        <div class="card skills">
+          <span>Python</span>
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>C</span>
+          <span>Java</span>
+        </div>
+      </section>
+
+      <section id="contato">
+        <h2>Contato</h2>
+        <div class="card">
+          <p>
+            GitHub:
+            <a href="https://github.com/gbanjo777" target="_blank">gbanjo777</a
+            ><br /><br />
+            LinkedIn:
+            <a
+              href="https://www.linkedin.com/in/gabriel-roque-153792235/"
+              target="_blank"
+            >
+              Gabriel Roque </a
+            ><br /><br />
+            Instagram:
+            <a href="https://www.instagram.com/gb.saant0z_/" target="_blank">
+              @gb.saant0z_
+            </a>
+          </p>
+        </div>
+      </section>
+
+      <footer>© 2025 • Gabriel Roque • Portfólio</footer>
+    </div>
+
+    <script>
+      function showTab(id) {
+        document.querySelectorAll("section").forEach((sec) => {
+          sec.classList.remove("active");
+        });
+
+        document.querySelectorAll("nav button").forEach((btn) => {
+          btn.classList.remove("active");
+        });
+
+        document.getElementById(id).classList.add("active");
+        event.target.classList.add("active");
+      }
+    </script>
+  </body>
+</html>
